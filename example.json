@@ -1,0 +1,52 @@
+{
+  "before": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "channel": {
+        "type": "string"
+      },
+      "hours": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "channel"
+    ]
+  },
+  "after": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "channel": {
+        "type": "string",
+        "maxLength": 24
+      },
+      "hours": {
+        "type": "number",
+        "minimum": 0
+      },
+      "tags": {
+        "type": "array",
+        "maxItems": 3,
+        "items": {
+          "type": "string"
+        }
+      },
+      "owner": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "channel",
+      "owner"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "6 constraint changes, including 3 local compatibility risks.",
+  "metrics": {
+    "Changes": 6,
+    "Narrowing": 3,
+    "Compatible": 3
+  },
+  "rows": [
+    {
+      "Pointer": "/properties/channel",
+      "Constraint": "maxLength",
+      "Before": "unbounded",
+      "After": "24",
+      "Impact": "Can reject old input"
+    },
+    {
+      "Pointer": "/properties/hours",
+      "Constraint": "type",
+      "Before": "integer",
+      "After": "number",
+      "Impact": "Compatible"
+    },
+    {
+      "Pointer": "/properties/hours",
+      "Constraint": "minimum",
+      "Before": "1",
+      "After": "0",
+      "Impact": "Compatible"
+    },
+    {
+      "Pointer": "/properties/owner",
+      "Constraint": "required",
+      "Before": "False",
+      "After": "True",
+      "Impact": "Can reject old input"
+    },
+    {
+      "Pointer": "/properties/owner",
+      "Constraint": "property",
+      "Before": "not allowed",
+      "After": "string",
+      "Impact": "Compatible"
+    },
+    {
+      "Pointer": "/properties/tags",
+      "Constraint": "maxItems",
+      "Before": "unbounded",
+      "After": "3",
+      "Impact": "Can reject old input"
+    }
+  ]
+}

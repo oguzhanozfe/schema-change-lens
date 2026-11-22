@@ -1,0 +1,14 @@
+{
+  "model": "gemma-4-e4b-it",
+  "text": "Row 1 · Since this change can reject old input, what is the expected data loss or rejection rate for /properties/channel?",
+  "row": 1,
+  "record": {
+    "Pointer": "/properties/channel",
+    "Constraint": "maxLength",
+    "Before": "unbounded",
+    "After": "24",
+    "Impact": "Can reject old input"
+  },
+  "source_sha256": "0578db8da88963d0042f106337194ab0e2655aac8c175684fc761c22fa2dd422",
+  "report_sha256": "786c20167ebf9f9d015a2bf25457006e298bf7ac03bc5385e5fc6b6cb261dd09"
+}
